@@ -1,38 +1,118 @@
-.App {
-  text-align: center;
+.lyric-finder-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: indigo;
+    color: white;
+    height: 50px;
+    font-size: xx-large;
+    margin-bottom: 30px;
+    padding: 12px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search-container {
+    display: flex;
+    width: 55%;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid lightgray;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-header {
+    display: inline-flex;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.se-header-label {
+    font-weight: 600;
+    font-size: x-large;
 }
 
-.App-link {
-  color: #61dafb;
+.header-label {
+    width: 70%;
+    padding-left: 112px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-box {
+    width: 70%;
+    height: 25px;
+    margin-bottom: 12px;
+    margin-top: 2px
+}
+
+.input-box:focus {
+    outline-color: dodgerblue;
+}
+
+.add-tran {
+    color: white;
+    background-color: #673ab7;
+    border: none;
+    width: 72%;
+    height: 31px;
+    cursor: pointer;
+    box-shadow: 0 2px #999;
+    margin-bottom: 20px;
+}
+
+.add-tran:hover {
+    background-color: white;
+    color: #673ab7;
+    transition: ease-in;
+}
+
+.cards {
+    display: inline-grid;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    width: 40%;
+    margin: 10px;
+    box-shadow: 0 2px #999;
+}
+
+.text-bold {
+    font-weight: 500;
+}
+
+.get-lyrics {
+    color: white;
+    background-color: #673ab7;
+    border: none;
+    width: 100%;
+    height: 31px;
+    cursor: pointer;
+    box-shadow: 0 2px #999;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.get-lyrics:hover {
+    background-color: white;
+    color: #673ab7;
+    transition: ease-in;
+}
+
+.card-items {
+    padding: 8px;
+}
+
+.lyrics-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 12px;
+}
+
+.lyrics-header {
+    align-self: center;
+}
+
+.user-icon {
+    border-radius: 50%;
+    border: 2px solid white;
+    background: darkblue;
+    height: 40px;
 }

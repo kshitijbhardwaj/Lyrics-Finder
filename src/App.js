@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import SearchSong from "./SearchSong";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Lyrics from "./Lyrics";
+import Navbar from "./Navbar";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <Router>
+            <>
+                <Navbar/>
+                <div className="search-container">
+                    <Switch>
+                        <Route exact path="/" component={SearchSong}/>
+                        <Route exact path="/lyrics/track_id/:id" component={Lyrics}/>
+                    </Switch>
+                </div>
+            </>
+        </Router>
+
+    );
 }
 
 export default App;
